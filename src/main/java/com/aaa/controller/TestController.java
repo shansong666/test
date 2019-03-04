@@ -8,6 +8,7 @@ public class TestController {
     @RequestMapping("hello")
     public String hello(){
         System.out.println("访问index.html页面");
+        System.out.println("范俊男修改");
         return "index";
     }
 }
