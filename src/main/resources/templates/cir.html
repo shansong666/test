@@ -15,8 +15,6 @@
     <meta content="SegmentFault,思否,javascript,php,python,java,mysql,ios,android,vue.js,node.js,html,css,ruby,git,docker,前端"
           name="keywords"/>
     <link href="/opensearch.xml" rel="search" title="SegmentFault" type="application/opensearchdescription+xml"/>
-    <link href="https://static.segmentfault.com/v-5c78d357/global/img/favicon.ico" rel="shortcut icon"/>
-    <link href="https://static.segmentfault.com/v-5c78d357/global/img/touch-icon.png" rel="apple-touch-icon">
     <meta content="#009a61" name="msapplication-TileColor"/>
     <meta content="https://static.segmentfault.com/v-5c78d357/global/img/touch-icon.png"
           name="msapplication-square150x150logo"/>
@@ -240,25 +238,26 @@
                             </div>
                         </div>
                         <div class="group__discuss-list">
-                            <div class="group__discuss-item" data-url="/g/1570000014908485/d/1560000017473999"><a
-                                    class="group__discuss-avatar" href="/u/segmentfault" target="_blank"><img
-                                    class="avatar-40" th:src="@{picture/a0f1495549534457996685b7357b67a9.gif}"></a>
-                                <div class="group__discuss-box"><span class="group__discuss-title"
-                                                                      style="max-width:500px"><i
-                                        aria-hidden="true"
-                                        class="fa fa-thumb-tack"></i>&nbsp;<a
-                                        href="/g/1570000014908485/d/1560000017473999">一起来总结你的 2018 </a></span><span
-                                        class="group__discuss-author"><a
-                                        href="/u/segmentfault">SegmentFault</a>
-                                            · 2月22日
-                                                · 最后回复
-                                                                                                    <a href="/u/junyilanqiao">君忆蓝桥</a></span>
+
+
+                            <div class="group__discuss-item"  data-url="/g/1570000014908485/d/1560000017473999">
+                                <a class="group__discuss-avatar" href="/u/segmentfault" target="_blank">
+                                <img  class="avatar-40" th:src="@{picture/a0f1495549534457996685b7357b67a9.gif}"></a>
+                                <div class="group__discuss-box">
+                                    <span class="group__discuss-title" style="max-width:500px">
+                                        <i aria-hidden="true"  class="fa fa-thumb-tack"></i>&nbsp;
+                                        <a href="/g/1570000014908485/d/1560000017473999">一起来总结你的 2018 </a>
+                                    </span>
+                                    <span class="group__discuss-author"><a href="/u/segmentfault">SegmentFault</a>
+                                      · 2月22日 · 最后回复<a href="/u/junyilanqiao">君忆蓝桥</a></span>
                                     <div class="group__discuss-from"><a href="/g/career">职业生涯</a></div>
-                                    <div class="group__discuss-comment"><i aria-hidden="true"
-                                                                           class="fa fa-commenting mr5"></i>87
+                                    <div class="group__discuss-comment">
+                                        <i aria-hidden="true" class="fa fa-commenting mr5"></i>87
                                     </div>
                                 </div>
                             </div>
+
+
                             <div class="group__discuss-item" data-url="/g/1570000018311706/d/1560000018327000"><a
                                     class="group__discuss-avatar" href="/u/wangwenlin" target="_blank"><img
                                     class="avatar-40"
@@ -366,20 +365,11 @@
                         <small><a class="report"></a></small>
                     </div>
                 </div>
-                <div class="mb25 hidden-md hidden-sm hidden-xs"><img alt="Planets" height=136
-                                                                     th:src="@{/picture/20190305.png}"
-                                                                     usemap="#gridsMap" width=255>
-                    <map id="gridsMap" name="gridsMap"></map>
-                    <div style="text-align: center;"><a href="/sponsor"
-                                                        style="text-align:center; color:#9E9E9E; font-size:12px">想在上方展示你的广告？</a>
-                    </div>
-                    <script async th:src="@{/js/20190305.js}"></script>
-                </div>
-                <div class="widget-box no-border"><h2 class="h4 widget-box__title mb15 pt20"
-                                                      style="border-top: 1px solid #eee;">今日热议</h2>
+                <div class="widget-box no-border">
+                    <h2 class="h4 widget-box__title mb15 pt20"  style="border-top: 1px solid #eee;">今日热议</h2>
                     <ul class="widget-links list-unstyled">
-                        <li class="widget-links__item mb10"><a href="/g/1570000018311706/d/1560000018327000"
-                                                               title="[上海]Innotech集团招聘研发若干">[上海]Innotech集团招聘研发若干</a><br/>
+                        <li class="widget-links__item mb10">
+                            <a href="/g/1570000018311706/d/1560000018327000" title="[上海]Innotech集团招聘研发若干">[上海]Innotech集团招聘研发若干</a><br/>
                             <small class="text-muted">
                                 1 讨论
                             </small>
@@ -551,413 +541,45 @@
     <a class="hidden border-bottom" href="#" id="backtop">回顶部</a>
 </div>
 
-<script id="loginModal" type="text/template">
-    <div class="row bg-white login-modal">
-        <div class="col-md-12 login-wrap">
-            <form action="/api/user/login" method="POST" role="form" class="mt15">
-                <div class="form-group hidden">
-                    <input type="text" class="form-control" name="remember" value="1"
-                           autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <label for="username" class="control-label">手机号 或 Email</label>
-                    <input type="text" class="form-control" name="username" tabindex="1" required
-                           placeholder="11 位手机号 或 Email"
-                           autocomplete="off">
-                </div>
-                <div class="form-group">
-                    <label class="control-label">密码</label><span class="pull-right"><a
-                        href="/user/forgot" tabindex="4">忘记密码</a></span>
-                    <input type="password" class="form-control" name="password" tabindex="2" required
-                           placeholder="请输入密码">
-                </div>
-                <div class="form-group">
-                    <a
 
-                            href="/user/phoneLogin"
-                            class="phoneLogin"
-                    >手机验证码登录</a>
-                </div>
-                <div class="form-group clearfix">
-                    <button type="submit" class="btn-block btn btn-primary pull-right pl20 pr20" tabindex="3"
-                            onclick='ga("send", "event", "email login button", "clicked", "login modal");'>登录
-                    </button>
-                </div>
-            </form>
-            <div class="text-muted text-center more-login-area">
-                <span class="more-login-words">更多登录方式</span>
-            </div>
-            <div class="widget-login mb15 text-center">
-                <a href="/user/oauth/google" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
-                        class="icon-sn-google"></span></a>
-                <a href="/user/oauth/github" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
-                        class="icon-sn-github"></span></a>
-                <a href="/user/oauth/weibo" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
-                        class="icon-sn-weibo"></span></a>
-                <a href="/user/oauth/qq" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
-                        class="icon-sn-qq"></span></a>
-                <a href="/user/oauth/weixin" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
-                        class="icon-sn-weixin"></span></a>
-                <a href="/user/oauth/linkedin" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
-                        class="icon-sn-linkedin"></span></a>
-                <span id="loginShowMore" style="cursor: pointer" class="mb5"><span class="icon-sn-dotted"></span></span>
-                <a href="/user/oauth/twitter" class=" hidden"
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
-                        class="icon-sn-twitter"></span></a>
-                <a href="/user/oauth/facebook" class=" hidden"
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
-                        class="icon-sn-facebook"></span></a>
-                <a href="/user/oauth/douban" class=" hidden"
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
-                        class="icon-sn-douban"></span></a>
-            </div>
-            <div class="form-group clearfix">
-                <a class="btn-block btn btn-default pull-right pl20 pr20
-                        SFLogin
-             "
-
-
-                   onclick='ga("send", "event", "email login button", "clicked", "login modal");'>
-                    注册新账号
-                </a>
-            </div>
-            <p class="text-muted text-center mb15">登录即表示你同意网站的<a href="/tos" target="_blank">《服务条款》</a></p></div>
-    </div>
-</script>
-<script id="registerModal" type="text/template">
-    <div class="row bg-white login-modal">
-        <div class="col-md-12 login-wrap">
-
-            <form action="/api/user/register" method="POST" role="form" class="mt15">
-                <div class="form-group">
-                    <label for="name" class="control-label">你的名字</label>
-                    <input type="text" class="form-control" name="name" required placeholder="真实姓名或常用昵称">
-                </div>
-
-                <div class="form-group">
-                    <label for="mail" class="control-label">手机号</label>
-                    <input type="text" class="form-control" id="login-name" name="mail" required placeholder="11 位手机号">
-                </div>
-
-                <input type="text" class="hidden" name="register_type" value="mail">
-
-                <div class="form-group">
-                    <div class="captchaInput mb10">
-                        <input type="text" class="form-control" name="cap" placeholder="右侧的验证码"
-                               style="width:50%; display: inline; margin-right: 15px;">
-                        <span class="mt10">
-                                <a id="loginReloadCaptcha" href="javascript:void(0)">
-                                <img src="../static/picture/56b4abe4a99a4bb582d9bdbed3ea6838.gif" class="cap"
-                                     width="135"
-                                     height="34"/></a>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <div class="phone-register-only hidden">
-                        <div class="input-group">
-                            <input name="code" type="text" class="form-control js-user-login__phone-code-value"
-                                   placeholder="短信验证码">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default js-user-login__phone-vaild-btn" style="width:96px;"
-                                        type="button">
-                                获取验证码</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="password" class="control-label">密码</label>
-                    <input type="password" class="form-control" name="password" required placeholder="不少于 6 位的密码">
-                </div>
-                <div class="form-group clearfix">
-                    <button type="submit" class="btn-block btn btn-primary pl20 pr20 pull-right"
-                            onclick='ga("send", "event", "email register button", "clicked", "login modal");'>注册
-                    </button>
-                </div>
-                <div class="text-muted text-center more-login-area">
-                    <span class="more-login-words">更多登录方式</span>
-                </div>
-                <div class="widget-login mb15 text-center">
-                    <a href="/user/oauth/google" class=""
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
-                            class="icon-sn-google"></span></a>
-                    <a href="/user/oauth/github" class=""
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
-                            class="icon-sn-github"></span></a>
-                    <a href="/user/oauth/weibo" class=""
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
-                            class="icon-sn-weibo"></span></a>
-                    <a href="/user/oauth/qq" class=""
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
-                            class="icon-sn-qq"></span></a>
-                    <a href="/user/oauth/weixin" class=""
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
-                            class="icon-sn-weixin"></span></a>
-                    <a href="/user/oauth/linkedin" class=""
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
-                            class="icon-sn-linkedin"></span></a>
-                    <span id="loginShowMore" style="cursor: pointer" class="mb5"><span
-                            class="icon-sn-dotted"></span></span>
-                    <a href="/user/oauth/twitter" class=" hidden"
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
-                            class="icon-sn-twitter"></span></a>
-                    <a href="/user/oauth/facebook" class=" hidden"
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
-                            class="icon-sn-facebook"></span></a>
-                    <a href="/user/oauth/douban" class=" hidden"
-                       onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
-                            class="icon-sn-douban"></span></a>
-                </div>
-                <div class="form-group clearfix">
-                    <a class="btn-block btn btn-default pull-right pl20 pr20
-                        SFRegister
-             "
-
-
-                       onclick='ga("send", "event", "email login button", "clicked", "login modal");'>
-                        已有账号登录
-                    </a>
-                </div>
-                <p class="text-muted text-center mb15">登录即表示你同意网站的<a href="/tos" target="_blank">《服务条款》</a></p></form>
-        </div>
-    </div>
-</script>
-<script id="phoneLoginModal" type="text/template">
-
-    <div class="row bg-white login-modal phonelogin-modal">
-        <div class="col-md-12 login-wrap">
-            <form action="/api/user/phonelogin" method="POST" role="form" class="mt15">
-                <div class="form-group">
-                    <label for="phone" class="control-label required">手机号</label>
-                    <input type="text" class="form-control phonelogin--phone" name="phone" tabindex="1" required
-                           placeholder="11 位手机号"
-                           autocomplete="off">
-                    <span class="help-block"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="authCode" class="control-label required">验证码</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control bindphone--code" name="authCode" placeholder="短信验证码">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default user-bind__phone-vaild-btn" type="button">获取验证码</button>
-                        </span>
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-
-                <div class="form-group">
-                    <a
-                            href="/user/login"
-                            class="SFRegister"
-                    >密码登录（手机号或 Email）</a>
-                </div>
-                <div class="form-group clearfix">
-                    <button type="submit" class="btn-block btn btn-primary pull-right pl20 pr20" tabindex="3"
-                            onclick='ga("send", "event", "email login button", "clicked", "login modal");'>登录
-                    </button>
-                </div>
-            </form>
-            <div class="text-muted text-center more-login-area">
-                <span class="more-login-words">更多登录方式</span>
-            </div>
-            <div class="widget-login mb15 text-center">
-                <a href="/user/oauth/google" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "google"});'><span
-                        class="icon-sn-google"></span></a>
-                <a href="/user/oauth/github" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "github"});");'><span
-                        class="icon-sn-github"></span></a>
-                <a href="/user/oauth/weibo" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "weibo"});'><span
-                        class="icon-sn-weibo"></span></a>
-                <a href="/user/oauth/qq" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
-                        class="icon-sn-qq"></span></a>
-                <a href="/user/oauth/weixin" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "qq"});'><span
-                        class="icon-sn-weixin"></span></a>
-                <a href="/user/oauth/linkedin" class=""
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "linkedin"});'><span
-                        class="icon-sn-linkedin"></span></a>
-                <span id="loginShowMore" style="cursor: pointer" class="mb5"><span class="icon-sn-dotted"></span></span>
-                <a href="/user/oauth/twitter" class=" hidden"
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "twitter"});'><span
-                        class="icon-sn-twitter"></span></a>
-                <a href="/user/oauth/facebook" class=" hidden"
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "facebook"});'><span
-                        class="icon-sn-facebook"></span></a>
-                <a href="/user/oauth/douban" class=" hidden"
-                   onclick='ga("send", "event", "3rd login button", "clicked", "login modal", {media: "douban"});'><span
-                        class="icon-sn-douban"></span></a>
-            </div>
-            <div class="form-group clearfix">
-                <a class="btn-block btn btn-default pull-right pl20 pr20
-                        SFLogin
-             "
-
-
-                   onclick='ga("send", "event", "email login button", "clicked", "login modal");'>
-                    注册新账号
-                </a>
-            </div>
-            <p class="text-muted text-center mb15">登录即表示你同意网站的<a href="/tos" target="_blank">《服务条款》</a></p></div>
-    </div>
-</script>
-<script id="bindPhoneModal" type="text/template">
-    <div class="bg-white bindphone-model">
-        <div class="alert alert-warning" role="alert">
-            为了保证账号安全，请先绑定手机
-        </div>
-        <div>
-            <form class="form-horizontal form__bindphone-apply" style="background-color:#fff;padding:0;">
-                <div class="form-group ">
-                    <label for="phoneNumber" class="col-sm-3 control-label required">手机号码</label>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control bindphone--phone" id="phoneNumber" name="phone"
-                               placeholder="仅只支持大陆手机号">
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-                <div class="form-group">
-                    <label for="authCode" class="col-sm-3 control-label required">验证码</label>
-                    <div class="col-sm-6">
-                        <div class="input-group">
-                            <input type="text" class="form-control bindphone--code" name="code" placeholder="短信验证码">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default user-bind__phone-vaild-btn" type="button">获取验证码</button>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-sm-3"></div>
-                </div>
-            </form>
-        </div>
-
-    </div>
-</script>
 
 
 <script>
     window.serverTime = 1551750530000;
 </script>
+<script crossorigin th:src="@{js/assets.js}"></script>
+<script th:src="@{js/ads.min.js}" type="text/javascript"></script>
+<!--<script>
 
-<script>
-    (function (w) {
-        w.SF = {
-            staticUrl: "https://static.segmentfault.com/v-5c78d357"
-        };
-        w.SF.token = (function () {
-            var _evXx = '0f'//'y'
-                +//'3'
-                'd5' +//'ZfL'
-                'ZfL' + '1'//'C'
-                + 'b6'//'IJv'
-                +//'U'
-                'U' + 'bba'//'aPy'
-                + '41'//'At'
-                +//'m'
-                '98' +//'pnj'
-                'fe' + ''///*'dWa'*/'dWa'
-                +//'Yg'
-                '5' + '4c'//'ZY'
-                + 'd'//'fm7'
-                + 'ce'//'b'
-                +//'1'
-                '1' +//'u'
-                'u' + 'e1'//'c'
-                + 'b5'//'YG'
-                +//'re'
-                '6b' + 'cf'//'T'
-                + ''///*'D7'*/'D7'
-                + 'd'//'7'
-                , _E25 = [[4, 7], [7, 8], [23, 24]];
+    $(function () {
+        $.ajax({ url: "circle/query",
+            type:'post',
+            success: function(data){
+                console.log($(".group__discuss-content").html());
+                console.log(data[0].title);
+                console.log("<div class=\"group__discuss-item\" data-url=\"/g/1570000018311706/d/1560000018327000\">\n" +
+                    "\t<a class=\"group__discuss-avatar\" href=\"/u/wangwenlin\" target=\"_blank\">\n" +
+                    "\t<img class=\"avatar-40\" th:src=\"@{/picture/a5c0ed7bae464966aeabd05cda310ce0.gif}\"></a>\n" +
+                    "\t<div class=\"group__discuss-box\"><span class=\"group__discuss-title\" style=\"max-width:500px\">\n" +
+                    "\t\t<a href=\"/g/1570000018311706/d/1560000018327000\">" +data[0].title+
+                    "</a></span>\n" +
+                    "\t\t<span class=\"group__discuss-author\">\n" +
+                    "\t\t<a href=\"/u/wangwenlin\">小蜗牛</a> · " +data[0].time+
+                    "· 最后回复 \n" +
+                    "\t\t<a href=\"/u/lmtianzi\">lmtianzi</a></span> \n" +
+                    "\t\t\t<div class=\"group__discuss-from\"><a href=\"/g/jobs\">酷工作</a></div> \n" +
+                    "\t\t\t<div class=\"group__discuss-comment\">\n" +
+                    "\t\t\t\t<i aria-hidden=\"true\"  class=\"fa fa-commenting mr5\"></i>3\n" +
+                    "\t\t\t</div>\n" +
+                    "\t</div>\n" +
+                    "</div>");
+                $("input:hidden").each(function(i,val){
 
-            for (var i = 0; i < _E25.length; i++) {
-                _evXx = _evXx.substring(0, _E25[i][0]) + _evXx.substring(_E25[i][1]);
-            }
-
-            return _evXx;
-        })();
-        ;
-    })(window);
-
-    var lock = {
-        type: "",
-        text: '',
-        table: {"ban_post": [1, "\u4f60\u5df2\u7ecf\u88ab\u7981\u8a00, \u65e0\u6cd5\u8fdb\u884c\u6b64\u64cd\u4f5c, \u5982\u6709\u7591\u4e49\u8bf7\u63d0\u4ea4\u7533\u8bc9, \u6216\u8005\u53d1\u90ae\u4ef6\u5230pr@segmentfault.com"]}
-    };
-
-    var ddosMode = false;
-</script>
-
-<script crossorigin src="../static/js/assets.js"></script>
-
-<script crossorigin src="../static/js/detail.min.js"></script>
-
-
-<script src="../static/js/ads.min.js" type="text/javascript"></script>
-
-<script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-918487-8']);
-    _gaq.push(['_trackPageview']);
-    (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-            (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o),
-            m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-
-    ga('create', 'UA-918487-8', 'auto', {
-        'userID': 0,
-        'createdTime': 0,
-        'now': 1551750531,
-        'allowLinker': true
+                });
+            }});
     });
-    ga('require', 'linker');
-    ga('linker:autoLink', ['docs.segmentfault.com']);
-    ga('set', 'dimension1', 'guest');
-    ga('send', 'pageview');
 
-    if (document.getElementById('UGTKzPZbRoOS')) {
-        UGTKzPZbRoOS = 'No';
-    } else {
-        UGTKzPZbRoOS = 'Yes';
-    }
-
-    if (typeof ga !== 'undefined') {
-        ga('send', 'event', 'Blocking Ads', UGTKzPZbRoOS, {'nonInteraction': 1});
-    } else if (typeof _gaq !== 'undefined') {
-        _gaq.push(['_trackEvent', 'Blocking Ads', UGTKzPZbRoOS, undefined, undefined, true]);
-    }
-
-</script>
-
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?e23800c454aa573c0ccb16b52665ac26";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+</script>-->
 
 
 </body>
