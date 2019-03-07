@@ -3,7 +3,7 @@ package com.aaa.entity;
 import java.util.Date;
 
 public class User_info {
-    private Integer uesrid;
+    private Integer userid;
     private String username;
     private Integer sex;
     private Date birthday;
@@ -12,11 +12,12 @@ public class User_info {
     private String idcard;
     private String truename;
     private Integer rank;
+    private String head;
     private Date createuser;
     private Integer userstatus;
 
-    public User_info(Integer uesrid, String username, Integer sex, Date birthday, String phone, String address, String idcard, String truename, Integer rank, Date createuser, Integer userstatus) {
-        this.uesrid = uesrid;
+    public User_info(Integer userid, String username, Integer sex, Date birthday, String phone, String address, String idcard, String truename, Integer rank, String head, Date createuser, Integer userstatus) {
+        this.userid = userid;
         this.username = username;
         this.sex = sex;
         this.birthday = birthday;
@@ -25,6 +26,7 @@ public class User_info {
         this.idcard = idcard;
         this.truename = truename;
         this.rank = rank;
+        this.head = head;
         this.createuser = createuser;
         this.userstatus = userstatus;
     }
@@ -32,12 +34,12 @@ public class User_info {
     public User_info() {
     }
 
-    public Integer getUesrid() {
-        return uesrid;
+    public Integer getUserid() {
+        return userid;
     }
 
-    public void setUesrid(Integer uesrid) {
-        this.uesrid = uesrid;
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
     public String getUsername() {
@@ -96,6 +98,14 @@ public class User_info {
         this.truename = truename;
     }
 
+    public String getHead() {
+        return head;
+    }
+
+    public void setHead(String head) {
+        this.head = head;
+    }
+
     public Integer getRank() {
         return rank;
     }
@@ -123,7 +133,7 @@ public class User_info {
     @Override
     public String toString() {
         return "User_info{" +
-                "uesrid=" + uesrid +
+                "userid=" + userid +
                 ", username='" + username + '\'' +
                 ", sex=" + sex +
                 ", birthday=" + birthday +
@@ -132,6 +142,7 @@ public class User_info {
                 ", idcard='" + idcard + '\'' +
                 ", truename='" + truename + '\'' +
                 ", rank=" + rank +
+                ", head='" + head + '\'' +
                 ", createuser=" + createuser +
                 ", userstatus=" + userstatus +
                 '}';

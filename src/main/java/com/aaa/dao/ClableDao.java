@@ -11,4 +11,6 @@ public interface ClableDao {
     public List<Clable> query(Integer offict,Integer pagesize);
     @Select("select * from clable")
     public List<Clable> queryAll();
+    @Select("select * from clable where clableid = #{param1}")
+    public List<Clable> queryByClableid(Integer clableid);
 }

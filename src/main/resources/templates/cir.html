@@ -21,10 +21,10 @@
     <meta content="bcf7fd80dca60d53d46d5b46e1b990ca" name="baidu_union_verify">
     <link href="/feeds/questions" rel="alternate" title="SegmentFault 最新问题" type="application/atom+xml">
     <link href="/feeds/blogs" rel="alternate" title="SegmentFault 最新文章" type="application/atom+xml">
-    <link th:href="@{/css/global.css}" rel="stylesheet"/>
-    <link th:href="@{/css/group.css}" rel="stylesheet"/>
-    <link th:href="@{/css/responsive.css}" rel="stylesheet"/>
-    <script th:href='@{/js/spcjs.js}' type='text/javascript'></script>
+    <link th:href="@{../css/global.css}" rel="stylesheet"/>
+    <link th:href="@{../css/group.css}" rel="stylesheet"/>
+    <link th:href="@{../css/responsive.css}" rel="stylesheet"/>
+    <script th:href='@{../js/spcjs.js}' type='text/javascript'></script>
 </head>
 <body class="group-detail "
       data-mod="group"><img data-src="../static/picture/touch-icon-512.png" id="icon4weChat"
@@ -238,116 +238,24 @@
                             </div>
                         </div>
                         <div class="group__discuss-list">
-
-
-                            <div class="group__discuss-item"  data-url="/g/1570000014908485/d/1560000017473999">
+                            <div class="group__discuss-item" th:each="nets:${circ}" data-url="/g/1570000014908485/d/1560000017473999">
                                 <a class="group__discuss-avatar" href="/u/segmentfault" target="_blank">
-                                <img  class="avatar-40" th:src="@{picture/a0f1495549534457996685b7357b67a9.gif}"></a>
+                                <img  class="avatar-40" th:src="@{${nets['head']}}"></a>
                                 <div class="group__discuss-box">
                                     <span class="group__discuss-title" style="max-width:500px">
                                         <i aria-hidden="true"  class="fa fa-thumb-tack"></i>&nbsp;
-                                        <a href="/g/1570000014908485/d/1560000017473999">一起来总结你的 2018 </a>
+                                        <a href="/g/1570000014908485/d/1560000017473999" th:text="${nets['title']}"></a>
                                     </span>
-                                    <span class="group__discuss-author"><a href="/u/segmentfault">SegmentFault</a>
-                                      · 2月22日 · 最后回复<a href="/u/junyilanqiao">君忆蓝桥</a></span>
-                                    <div class="group__discuss-from"><a href="/g/career">职业生涯</a></div>
+                                    <span class="group__discuss-author"><a href="/u/segmentfault" th:text="${nets['username']}"></a>
+                                        <span th:text="${nets['rtime']}"></span><span th:if="${nets['rname']}"> ·最后回复 </span>
+                                        <a href="/u/junyilanqiao" th:text="${nets['rname']}"></a></span>
+                                    <div class="group__discuss-from"><a href="/g/career"><h5 th:text="${nets['clablename']}"></h5></a></div>
                                     <div class="group__discuss-comment">
-                                        <i aria-hidden="true" class="fa fa-commenting mr5"></i>87
+                                        <i class="fa fa-commenting mr5" aria-hidden="true"></i><h4 th:text="${nets['rcount']}"></h4>
                                     </div>
                                 </div>
                             </div>
 
-
-                            <div class="group__discuss-item" data-url="/g/1570000018311706/d/1560000018327000"><a
-                                    class="group__discuss-avatar" href="/u/wangwenlin" target="_blank"><img
-                                    class="avatar-40"
-                                    th:src="@{/picture/a5c0ed7bae464966aeabd05cda310ce0.gif}"></a>
-                                <div class="group__discuss-box"><span class="group__discuss-title"
-                                                                      style="max-width:500px"><a
-                                        href="/g/1570000018311706/d/1560000018327000">[上海]Innotech集团招聘研发若干</a></span><span
-                                        class="group__discuss-author"><a
-                                        href="/u/wangwenlin">小蜗牛</a>
-                                            · 1 小时前
-                                                · 最后回复
-                                                                                                    <a href="/u/lmtianzi">lmtianzi</a></span>
-                                    <div class="group__discuss-from"><a href="/g/jobs">酷工作</a></div>
-                                    <div class="group__discuss-comment"><i aria-hidden="true"
-                                                                           class="fa fa-commenting mr5"></i>3
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group__discuss-item" data-url="/g/1570000018311706/d/1560000018371778"><a
-                                    class="group__discuss-avatar" href="/u/yvonne_5c77a8cd7cef5" target="_blank"><img
-                                    class="avatar-40"
-                                    th:src="@{/picture/7548abc3b3f04658847e3cebc1150bbd.gif}"></a>
-                                <div class="group__discuss-box"><span class="group__discuss-title"
-                                                                      style="max-width:500px"><a
-                                        href="/g/1570000018311706/d/1560000018371778">[杭州]海康威视 招聘软件架构师、高级Java、GIS开发、测试开发、产品售前、产品经理等若干</a></span><span
-                                        class="group__discuss-author"><a
-                                        href="/u/yvonne_5c77a8cd7cef5">Yvonne</a>
-                                            · 1 天前
-
-                                                                                        </span>
-                                    <div class="group__discuss-from"><a href="/g/jobs">酷工作</a></div>
-                                    <div class="group__discuss-comment"><i aria-hidden="true"
-                                                                           class="fa fa-commenting mr5"></i>0
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group__discuss-item" data-url="/g/1570000018311706/d/1560000018355881"><a
-                                    class="group__discuss-avatar" href="/u/ann_108" target="_blank"><img
-                                    class="avatar-40"
-                                    th:src="@{/picture/user-64.png}"></a>
-                                <div class="group__discuss-box"><span class="group__discuss-title"
-                                                                      style="max-width:500px"><a
-                                        href="/g/1570000018311706/d/1560000018355881">[杭州]智课教育  诚聘：node.js开发工程师 （本科，10K-20K，1-3年）</a></span><span
-                                        class="group__discuss-author"><a
-                                        href="/u/ann_108">Ann_108</a>
-                                            · 3 天前
-
-                                                                                        </span>
-                                    <div class="group__discuss-from"><a href="/g/jobs">酷工作</a></div>
-                                    <div class="group__discuss-comment"><i aria-hidden="true"
-                                                                           class="fa fa-commenting mr5"></i>0
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group__discuss-item" data-url="/g/1570000016732596/d/1560000018319016"><a
-                                    class="group__discuss-avatar" href="/u/leoyi" target="_blank"><img
-                                    class="avatar-40"
-                                    th:src="@{/picture/b1aacf073eaf42f79750d1124dd89ad3.gif}"></a>
-                                <div class="group__discuss-box"><span class="group__discuss-title"
-                                                                      style="max-width:500px"><a
-                                        href="/g/1570000016732596/d/1560000018319016">PHP面试过程中你都遇到了哪些问题？</a></span><span
-                                        class="group__discuss-author"><a
-                                        href="/u/leoyi">琉忆</a>
-                                            · 4 天前
-                                                · 最后回复
-                                                                                                    <a href="/u/kaixinbobo">开心bobo</a></span>
-                                    <div class="group__discuss-from"><a href="/g/lee">学无止境</a></div>
-                                    <div class="group__discuss-comment"><i aria-hidden="true"
-                                                                           class="fa fa-commenting mr5"></i>3
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="group__discuss-item" data-url="/g/1570000010558968/d/1560000016252687"><a
-                                    class="group__discuss-avatar" href="/u/zhufeng_5a309b7161ef1" target="_blank"><img
-                                    class="avatar-40"
-                                    th:src="@{/picture/e3d53c48c4034f00a386c669401607f4.gif}"></a>
-                                <div class="group__discuss-box"><span class="group__discuss-title"
-                                                                      style="max-width:500px"><a
-                                        href="/g/1570000010558968/d/1560000016252687">帮公司招人招的怀疑人生的求各位大佬解个惑</a></span><span
-                                        class="group__discuss-author"><a
-                                        href="/u/zhufeng_5a309b7161ef1">逐风</a>
-                                            · 4 天前
-                                                · 最后回复
-                                                                                                    <a href="/u/kaixinbobo">开心bobo</a></span>
-                                    <div class="group__discuss-from"><a href="/g/developer">程序员の日常</a></div>
-                                    <div class="group__discuss-comment"><i aria-hidden="true"
-                                                                           class="fa fa-commenting mr5"></i>8
-                                    </div>
-                                </div>
-                            </div>
                             <div class="text-center mt30 mb30">
                                 <ul class="pager">
                                     <li>加入自己感兴趣的圈子吧</li>
@@ -511,7 +419,7 @@
                 <dd><a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">内容许可</a></dd>
                 <dd>
                     <a class="clearfix mt10 block" href="/app"><img class="app-qrcode"
-                                                                    th:src="@{/picture/appqrcode.png}"></a>
+                                                                    th:src="@{../picture/appqrcode.png}"></a>
                     <div class="app-download-desc">
                         <p>扫一扫下载 App</p>
                     </div>
@@ -547,8 +455,8 @@
 <script>
     window.serverTime = 1551750530000;
 </script>
-<script crossorigin th:src="@{js/assets.js}"></script>
-<script th:src="@{js/ads.min.js}" type="text/javascript"></script>
+<script crossorigin th:src="@{../js/assets.js}"></script>
+<script th:src="@{../js/ads.min.js}" type="text/javascript"></script>
 <!--<script>
 
     $(function () {
@@ -559,7 +467,7 @@
                 console.log(data[0].title);
                 console.log("<div class=\"group__discuss-item\" data-url=\"/g/1570000018311706/d/1560000018327000\">\n" +
                     "\t<a class=\"group__discuss-avatar\" href=\"/u/wangwenlin\" target=\"_blank\">\n" +
-                    "\t<img class=\"avatar-40\" th:src=\"@{/picture/a5c0ed7bae464966aeabd05cda310ce0.gif}\"></a>\n" +
+                    "\t<img class=\"avatar-40\" th:src=\"@{..//picture/a5c0ed7bae464966aeabd05cda310ce0.gif}\"></a>\n" +
                     "\t<div class=\"group__discuss-box\"><span class=\"group__discuss-title\" style=\"max-width:500px\">\n" +
                     "\t\t<a href=\"/g/1570000018311706/d/1560000018327000\">" +data[0].title+
                     "</a></span>\n" +

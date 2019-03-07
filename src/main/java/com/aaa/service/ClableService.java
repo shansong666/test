@@ -25,5 +25,8 @@ public class ClableService {
         map.put("data", query);
         return map;
     }
+    public List<Clable> queryByClableid(Integer clableid){
+        return cd.queryByClableid(clableid);
+    }
 
 }

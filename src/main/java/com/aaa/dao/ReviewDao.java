@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface ReviewDao {
-    @Select("select * from ")
+    @Select("select * from review where composeid = #{param1} ")
     public List<Review> queryByComposeid(Integer composeid);
+
 }
